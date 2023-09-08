@@ -1,24 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawOnVideoSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lL-dS-pBa">
+                                <rect key="frame" x="130" y="408.66666666666669" width="133" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Choose image"/>
+                                <connections>
+                                    <action selector="pickVideoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1H2-V5-Hqf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2C8-bU-lpf">
+                                <rect key="frame" x="132.66666666666666" y="737" width="127.99999999999997" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start Drawing"/>
+                                <connections>
+                                    <action selector="startDrawingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L9Q-QS-gOs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpG-4u-OFy">
+                                <rect key="frame" x="115.66666666666667" y="783" width="161.66666666666663" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save Edited Video"/>
+                                <connections>
+                                    <action selector="saveVideoWithDrawingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="642-c4-gWj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gph-gp-Fvz">
+                                <rect key="frame" x="151" y="677" width="91" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Text"/>
+                                <connections>
+                                    <action selector="addTextToImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZqA-oG-psY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mpG-4u-OFy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="39Q-uz-82R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2C8-bU-lpf" secondAttribute="bottom" constant="46" id="4jp-oM-ErQ"/>
+                            <constraint firstItem="mpG-4u-OFy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5UG-iM-IXK"/>
+                            <constraint firstItem="2C8-bU-lpf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H6Y-Dg-VlQ"/>
+                            <constraint firstItem="Gph-gp-Fvz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J09-bN-4bc"/>
+                            <constraint firstItem="9lL-dS-pBa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SB2-W6-Ye5"/>
+                            <constraint firstItem="9lL-dS-pBa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZqJ-Sm-PRf"/>
+                            <constraint firstItem="2C8-bU-lpf" firstAttribute="top" secondItem="Gph-gp-Fvz" secondAttribute="bottom" constant="25" id="mNZ-Ku-TNN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="67.938931297709928" y="-28.169014084507044"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
