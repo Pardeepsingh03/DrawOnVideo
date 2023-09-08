@@ -13,7 +13,7 @@ Clone this repository to your local machine:
 
 bash
 Copy code
-git clone https://github.com/Pardeepsingh03/DrawOnVideoSample.git
+git clone https://github.com/Pardeepsingh03/DrawOnVideo.git
 Open the project in Xcode:
 
 bash
